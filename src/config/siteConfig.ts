@@ -7,13 +7,13 @@ const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "异次元",
+	title: "小鸟游",
 
 	// 站点副标题
 	subtitle: "Personal Blog Demo",
 
 	// 站点 URL
-	site_url: "https://394000.xyz",
+	site_url: "https://nakanashi.com",
 
 	// 站点描述
 	description:
@@ -22,12 +22,9 @@ export const siteConfig: SiteConfig = {
 	// 站点关键词
 	keywords: [
 		"JohnRiver",
-		"Fuwari",
-		"Astro",
-		"ACGN",
-		"博客",
-		"技术博客",
-		"静态博客",
+		"Animation",
+		"Blog",
+		"Photogram",
 	],
 
 	// 主题色
