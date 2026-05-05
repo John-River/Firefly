@@ -1,12 +1,13 @@
 ---
 title: 攻城木
 published: 2026-05-05
-pinned: true
-description: 作者：张竞航 谢哲轩 陈逸 蒋牧言
+pinned: false
+description: 当烟花绽放时，一切都将归于星辰
 tags: [投稿, 小说, 高中]
 category: 投稿小说
 draft: false
 image: ./images/gcm.jpg
+author: 张竞航 谢哲轩 陈逸 蒋牧言
 ---
 
 # 攻城木
