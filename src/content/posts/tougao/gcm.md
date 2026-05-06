@@ -7,12 +7,12 @@ tags: [投稿, 小说, 高中]
 category: 投稿小说
 draft: false
 image: ./images/gcm.jpg
-author: 张竞航 谢哲轩 陈逸 蒋牧言
+author: Youner Song relife J
 ---
 
 # 攻城木
 
-## 作者：张竞航 谢哲轩 陈逸 蒋牧言
+## 作者：Youner Song relife J
 
 从前，有一座古城，名叫武斑。城中牛马遍地，鸡鸣犬吠。城中有一名公主，貌美如花，倾国倾城，据说是从印度而来，虽然像一朵娇嫩的花，但无人舍得折断它据为己有，故名唤“谢折公主”。这位公主住在一艘停于陆地的飞船之中，飞船名为 “谢折轩” 。
 
