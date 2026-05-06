@@ -44,12 +44,9 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 		// 移动背景图片（支持单张或多张随机）
 		// mobile: "assets/images/MobileWallpaper/m1.avif",
 		mobile: [
-			"assets/images/MobileWallpaper/m1.avif",
-			"assets/images/MobileWallpaper/m2.avif",
-			"assets/images/MobileWallpaper/m3.avif",
-			"assets/images/MobileWallpaper/m4.avif",
-			"assets/images/MobileWallpaper/m5.avif",
-			"assets/images/MobileWallpaper/m6.avif",
+			"assets/images/MobileWallpaper/mo1.jpg",
+			"assets/images/MobileWallpaper/mo2.jpg",
+			"assets/images/MobileWallpaper/mo3.jpg",
 		],
 	},
 	// Banner模式特有配置
@@ -72,6 +69,7 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 			// 主页横幅副标题
 			subtitle: [
 				"笔记、文章、小说、摄影和动漫",
+				"看看故事，品品生活"
 			],
 			// 主页横幅副标题字体大小
 			subtitleSize: "1.5rem",
@@ -100,13 +98,13 @@ export const backgroundWallpaper: BackgroundWallpaperConfig = {
 				// 桌面端要显示的来源文本
 				desktop: "Bilibili",
 				// 移动端要显示的来源文本
-				mobile: "Pixiv - KiraraShss",
+				mobile: "Pixiv",
 			},
 			url: {
 				// 桌面端原始艺术品或艺术家页面的 URL 链接
 				desktop: "https://www.bilibili.com/",
 				// 移动端原始艺术品或艺术家页面的 URL 链接
-				mobile: "https://www.pixiv.net/users/42715864",
+				mobile: "https://www.pixiv.net/",
 			},
 		},
 		// 横幅导航栏配置
