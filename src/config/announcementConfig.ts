@@ -5,7 +5,7 @@ export const announcementConfig: AnnouncementConfig = {
 	title: "公告",
 
 	// 公告内容
-	content: "BLOG V1.0公告须知",
+	content: "BLOG V1.1公告须知",
 
 	// 是否允许用户关闭公告
 	closable: false,
@@ -14,7 +14,7 @@ export const announcementConfig: AnnouncementConfig = {
 		// 启用链接
 		enable: true,
 		// 链接文本
-		text: "更多",
+		text: "查看更多",
 		// 链接 URL
 		url: "/about/",
 		// 内部链接

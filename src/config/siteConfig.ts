@@ -7,21 +7,23 @@ const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "小鸟游",
+	title: "小鳥遊",
 
 	// 站点副标题
-	subtitle: "Personal Blog Demo",
+	subtitle: "JR Personal Blog Demo",
 
 	// 站点 URL
 	site_url: "https://blog.nakanashi.com",
 
 	// 站点描述
 	description:
-		"个人Blog网站",
+		"John River的个人Blog网站",
 
 	// 站点关键词
 	keywords: [
 		"JohnRiver",
+		"Novel",
+		"Dairy",
 		"Animation",
 		"Blog",
 		"Photogram",
@@ -76,7 +78,7 @@ export const siteConfig: SiteConfig = {
 			alt: "🌸",
 		},
 		// 导航栏标题
-		title: "小鸟游",
+		title: "小鳥遊",
 		// 全宽导航栏，导航栏是否占满屏幕宽度
 		widthFull: false,
 		// 导航菜单对齐方式，left：左对齐，center：居中
