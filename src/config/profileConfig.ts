@@ -22,22 +22,22 @@ export const profileConfig: ProfileConfig = {
 	// showName: true 时显示图标和名称，false 时只显示图标
 	links: [
 		{
-			name: "qq",
-			icon: "fa7-brands:qq",
-			url: "https://qm.qq.com/q/ZGsFa8qX2G",
+			name: "bilibili",
+			icon: "fa7-brands:bilibili",
+			url: "https://space.bilibili.com/486024860?spm_id_from=333.1007.0.0",
 			showName: false,
 		},
 		{
 			name: "GitHub",
 			icon: "fa7-brands:github",
 			url: "https://github.com/John-River",
-			showName: true,
+			showName: false,
 		},
 		{
 			name: "Email",
 			icon: "fa7-solid:envelope",
 			url: "mailto:3459412450@qq.com",
-			showName: true,
+			showName: false,
 		},
 		{
 			name: "RSS",
