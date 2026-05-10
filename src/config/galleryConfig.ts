@@ -21,6 +21,14 @@ export const galleryConfig: GalleryConfig = {
 			date: "2026-05-06",
 			tags: ["狼与香辛料", "赫萝"],
 		},
+		{
+			id: "FriendAva-Youner",
+			name: "友链头像",
+			description: "Youner",
+			location: "Web",
+			date: "2026-05-10",
+			tags: ["Youner"],
+		},
 	],
 
 	// 瀑布流最小列宽(px)，浏览器根据容器宽度自动计算列数，默认 240
