@@ -25,7 +25,7 @@ export const friendsConfig: FriendLink[] = [
 	{
 		title: "Youner",
 		imgurl:
-			"https://weavatar.com/avatar/d252655d40d6874417a720bad0a6c5f77f8f6a1fd2f882f8f338402dc37e4190?s=640",
+			"https://blog.nakanashi.com/gallery/FriendAva-Youner/Youner.jpg",
 		desc: "",
 		siteurl: "https://blog.younerest.com",
 		tags: ["Blog"],
