@@ -82,6 +82,7 @@ async function loadEditor() {
       const timeout = setTimeout(() => reject(new Error('编辑器加载超时')), 20000);
       editor = new window.Vditor('editor', {
         cdn: CDN, mode: 'wysiwyg', lang: 'zh_CN', minHeight: 460, cache: { enable: false },
+        toolbarConfig: { pin: true },
         placeholder: '从一句话开始…', counter: { enable: true },
         toolbar: ['headings', 'bold', 'italic', 'strike', '|', 'list', 'ordered-list', 'check', 'quote', 'line', '|', 'link', 'upload', 'table', 'code', 'inline-code', '|', 'undo', 'redo', 'edit-mode', 'both', 'fullscreen'],
         preview: { markdown: { sanitize: true }, hljs: { enable: false }, math: { engine: 'KaTeX' } },
