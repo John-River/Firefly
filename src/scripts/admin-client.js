@@ -3,7 +3,7 @@ import sanitizeHtml from 'sanitize-html';
 
 const $ = (id) => document.getElementById(id);
 const PREFIX = 'src/content/posts/';
-const CDN = 'https://cdn.jsdelivr.net/npm/vditor@4.0.1';
+const CDN = `${window.location.origin}/admin/vendor/vditor`;
 let editor, ready = false, images = [], activePath = '', sha = '', posts = [], dirty = false, timer, saving = Promise.resolve();
 const fields = ['title', 'published', 'category', 'tags', 'author', 'image', 'description'];
 const today = () => new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Shanghai' });
