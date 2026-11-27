@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /api/admin/
 
-Sitemap: https://firefly.cuteleaf.cn/sitemap-index.xml
+Sitemap: https://blog.nakanashi.com/sitemap-index.xml

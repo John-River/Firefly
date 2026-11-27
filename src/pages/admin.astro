@@ -1,0 +1,48 @@
+---
+import { siteConfig } from '../config/siteConfig';
+---
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" /><title>写作后台 · {siteConfig.title}</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vditor@4.0.1/dist/index.css" />
+</head>
+<body>
+  <header><a href="/" class="brand">{siteConfig.title}<span>写作空间</span></a><span class="badge">试行版</span><a href="/" class="back">返回博客</a><button id="logout" hidden>退出登录</button></header>
+  <main>
+    <section id="login-panel" class="login-card card">
+      <div class="eyebrow">YOUR STORIES, YOUR SPACE</div><h1>从这里，开始记录。</h1><p>登录站主后台，写下新故事，或继续未完成的篇章。</p>
+      <form id="login-form"><label for="password">站主密码</label><input id="password" type="password" autocomplete="current-password" required maxlength="256" /><button class="primary" type="submit">进入写作空间</button></form><p id="login-message" role="status" aria-live="polite"></p>
+    </section>
+    <section id="workspace" hidden>
+      <div class="page-heading row"><div><div class="eyebrow">WRITE SOMETHING WORTH KEEPING</div><h1>我的文章</h1></div><button id="new-post">新建文章</button></div>
+      <div class="workspace-grid">
+        <aside class="articles card"><div class="row"><h2>文章列表</h2><button id="refresh">刷新</button></div><input id="post-search" type="search" placeholder="搜索文件名" aria-label="搜索文章" /><div id="post-list"></div></aside>
+        <div class="writing-area">
+          <form id="article-form" class="card metadata">
+            <label class="wide">文章标题<input id="title" required maxlength="200" placeholder="给这篇文章起个名字" /></label>
+            <label>文章地址<input id="slug" required pattern="[a-z0-9][a-z0-9/-]*" placeholder="例如 my-first-post" /><small>发布后保留原地址，避免链接失效。</small></label>
+            <label>发布日期<input id="published" type="date" required /></label>
+            <label>分类<input id="category" list="categories" maxlength="100" placeholder="选择或输入分类" /><datalist id="categories"></datalist></label>
+            <label>标签<input id="tags" maxlength="1000" placeholder="用逗号分隔，如：生活，摄影" /></label>
+            <label>作者<input id="author" maxlength="100" value="John River" /></label>
+            <label>封面图片<input id="image" maxlength="500" placeholder="上传封面或填写 HTTPS 地址" /></label>
+            <label class="wide">摘要<textarea id="description" maxlength="1000" rows="2" placeholder="用一两句话介绍这篇文章"></textarea></label>
+            <div class="wide row options"><label><input id="pinned" type="checkbox" />置顶文章</label><label><input id="comment" type="checkbox" checked />允许评论</label><button id="cover-upload" type="button">上传封面</button></div>
+          </form>
+          <section class="card editor-card"><div class="row editor-heading"><h2>正文</h2><button id="insert-image">插入图片</button></div><div id="editor"></div><div id="fallback" hidden><p>可视化编辑器暂未加载，可继续使用 Markdown 编辑与预览。</p><textarea id="markdown" rows="20" aria-label="Markdown 正文"></textarea><div id="markdown-preview"></div></div></section>
+          <div class="publish-bar card"><span id="draft-status">草稿保存在当前浏览器</span><div class="actions"><button id="export-draft">导出草稿</button><button id="clear-draft">清除本机草稿</button><button id="publish" class="primary">发布文章</button></div></div>
+          <p id="message" role="status" aria-live="polite"></p><div id="publish-result" hidden><p>文章已提交，正在等待网站构建上线。</p><a id="commit-link" target="_blank" rel="noopener">查看提交记录</a><a id="article-link" target="_blank" rel="noopener">打开文章</a></div>
+        </div>
+      </div>
+    </section>
+    <input type="file" id="image-files" accept="image/png,image/jpeg,image/webp,image/gif" multiple hidden /><input type="file" id="cover-file" accept="image/png,image/jpeg,image/webp,image/gif" hidden />
+  </main>
+  <script src="../scripts/admin-client.js"></script>
+</body>
+</html>
+<style is:global>
+  :root{color-scheme:light;--ink:#25312e;--muted:#697a73;--accent:#27664f;--line:#dde5df;font-family:system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;font-size:16px;color:var(--ink);background:#f3f6f4}*{box-sizing:border-box}body{margin:0}a{color:var(--accent);text-decoration:none}button,input,textarea{font:inherit}button{cursor:pointer;border:1px solid var(--line);border-radius:9px;padding:.65rem 1rem;background:white;color:var(--ink)}button:hover{border-color:var(--accent)}button:disabled{opacity:.55;cursor:wait}button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}[hidden]{display:none!important}input,textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:.7rem;background:#fff;color:var(--ink)}input:focus,textarea:focus{outline:2px solid #91bca8;outline-offset:1px}input[type=checkbox]{width:auto;accent-color:var(--accent)}textarea{resize:vertical}label{display:grid;gap:.45rem;font-size:.9rem}small{color:var(--muted);font-size:.8rem}h1,h2,p{margin-top:0}h1{font-size:2rem;letter-spacing:-.04em;margin-bottom:.6rem}h2{font-size:1rem;margin:0}header{display:flex;align-items:center;gap:1rem;min-height:76px;border-bottom:1px solid var(--line);padding:1rem 4vw;background:#fff}.back{margin-left:auto}.brand{font-size:1.3rem;font-weight:700;color:var(--ink)}.brand span{font-weight:400;font-size:.9rem;margin-left:1rem;color:var(--muted)}.badge{font-size:.8rem;background:#e5eee8;border-radius:5px;padding:.25rem .5rem;color:var(--accent)}main{max-width:1600px;margin:auto;padding:2rem 3vw 4rem}.eyebrow{font-size:.75rem;color:var(--accent);letter-spacing:.12em;font-weight:700;margin-bottom:1rem}.login-card{max-width:520px;margin:8vh auto;padding:2.7rem}.login-card>p{line-height:1.8;color:var(--muted)}#login-form{display:grid;gap:1rem;margin-top:2rem}#login-message{margin-top:1.5rem}.row{display:flex;align-items:center;justify-content:space-between;gap:1rem}.page-heading{margin-bottom:1.5rem}.workspace-grid{display:grid;grid-template-columns:240px minmax(0,1fr);gap:1.5rem}.card{background:#fff;border:1px solid var(--line);border-radius:12px}.articles{padding:1rem;align-self:start;position:sticky;top:1rem;max-height:80vh;overflow:auto}.articles input{margin:1rem 0}#post-list button{display:block;width:100%;text-align:left;border:none;background:transparent;overflow-wrap:anywhere;font-size:.85rem;line-height:1.6;padding:.7rem .4rem}#post-list button:hover{background:#f1f6f3}.writing-area{min-width:0}.metadata{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;padding:1.5rem}.wide{grid-column:1/-1}#title{font-size:1.35rem;font-weight:600}.options{justify-content:flex-start;flex-wrap:wrap}.options label{display:flex;align-items:center}.options button{margin-left:auto}.editor-card{margin-top:1.5rem;overflow:hidden}.editor-heading{padding:1rem 1.5rem;border-bottom:1px solid var(--line)}#editor{border:0!important}#fallback{padding:1.5rem}#markdown{font-family:monospace;line-height:1.8}#markdown-preview{padding:1rem 0;overflow-wrap:anywhere}#markdown-preview img{max-width:100%}.publish-bar{display:flex;gap:1rem;align-items:center;justify-content:space-between;padding:1rem;margin-top:1.5rem;flex-wrap:wrap}#draft-status{font-size:.85rem;color:var(--muted)}.actions{display:flex;gap:.5rem;flex-wrap:wrap}.actions button{font-size:.9rem}#message{white-space:pre-wrap;line-height:1.7;margin:1rem 0;color:var(--accent)}.error{color:#ad3030!important}#publish-result{border-left:3px solid var(--accent);padding:1rem;background:#e7f0ea}#publish-result a{margin-right:1.5rem;text-decoration:underline}.vditor-reset{font-family:inherit!important;line-height:1.9!important}.vditor-toolbar{padding:.5rem!important;background:#fafcfb!important}
+  @media(max-width:900px){.workspace-grid{grid-template-columns:1fr}.articles{position:static;max-height:230px}#post-list{display:flex;flex-wrap:wrap}#post-list button{width:auto}header{padding:1rem}.brand span{display:none}}@media(max-width:560px){.metadata{grid-template-columns:1fr;padding:1rem}.wide{grid-column:auto}.login-card{padding:1.5rem}header{gap:.5rem}.actions{width:100%}.publish-bar button{flex:1}.editor-heading{padding:1rem}}
+</style>

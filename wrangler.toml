@@ -1,8 +1,19 @@
 name = "firefly"
-compatibility_date = "2026-05-03" # 更为今日
+main = "worker/admin.js"
+compatibility_date = "2026-05-03"
 
 [assets]
 directory = "./dist"
+binding = "ASSETS"
+run_worker_first = ["/api/admin/*", "/admin", "/admin/*"]
 
 [vars]
 NODE_VERSION = "22"
+ADMIN_ORIGIN = "https://blog.nakanashi.com"
+GITHUB_REPO = "John-River/Firefly"
+GITHUB_BRANCH = "master"
+
+[[ratelimits]]
+name = "ADMIN_LOGIN_LIMITER"
+namespace_id = "817263"
+simple = { limit = 6, period = 60 }
